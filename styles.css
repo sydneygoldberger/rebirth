@@ -13,6 +13,7 @@ body {
   margin-left: 1vw;
   height: auto;
   justify-content: flex-start;
+  z-index: 2;
 }
 
 *:focus {
