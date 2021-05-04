@@ -1,0 +1,205 @@
+body {
+  font-weight: 400;
+  background-color: #f6f6f6;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
+#infobuttonContainer {
+  position: relative;
+  top: 1vw;
+  position: absolute;
+  display: flex;
+  margin-left: 1vw;
+  height: auto;
+  justify-content: flex-start;
+}
+
+*:focus {
+  outline: none;
+}
+
+.infoButton {
+  appearance: none;
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  position: relative;
+  z-index: 3;
+}
+
+.infoButton-btn {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  border-radius: 30px;
+  width: 22px;
+  height: 22px;
+  background-color: white;
+  transform: rotate(-45deg);
+  transition: border-radius 200ms ease-in-out;
+  border: 1px white solid;
+}
+
+.infoButton-btn-text {
+  display: block;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  transform: rotate(45deg);
+  font-size: 1.5vw;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.infoButton-container {
+  position: absolute;
+  left: calc(-100% + 100px);
+  left: calc(-100% + 30px);
+  transform: scale(0);
+  transition: transform 0ms linear 200ms;
+}
+
+#rebirth {
+  font-weight: 600;
+}
+
+.infoButton-container-message {
+  box-sizing: border-box;
+  width: 30vw;
+  padding: 16px 20px;
+  font-size: calc(12px + 0.2vw);
+  box-shadow: 0 1px 1px 0 rgba(black, 0.26);
+  border-radius: 4px;
+  line-height: 1.3;
+  text-align: left;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+.infoButton:focus .infoButton-btn,
+.infoButton_isActive .infoButton-btn {
+  transition: border-radius 200ms ease-in-out;
+  background-color: black;
+  color: white;
+}
+
+.infoButton:focus .infoButton-container,
+.infoButton_isActive .infoButton-container {
+  transform: scale(1);
+  transition: transform 0ms linear;
+}
+
+.infoButton:focus .infoButton-container-message,
+.infoButton_isActive .infoButton-container-message {
+  transform: translate(0);
+  opacity: 1;
+}
+
+body {
+  margin: 0px;
+}
+
+#flowerContainer {
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  position: absolute;
+}
+
+#output1 {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: -3;
+}
+
+#flowerlayer {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+}
+
+#opacitylayer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgb(175, 172, 172);
+  opacity: 0.2;
+  z-index: -2;
+}
+
+#pdf {
+  background-color: black;
+  color: white;
+  border: black 2px solid;
+  padding: 7px 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  position: absolute;
+  left: 0px;
+  width: auto;
+  margin: 0.5vw;
+  border-radius: 15px;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  border-radius: 50px;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background: white;
+  border-radius: 50px;
+}
+
+input[type="range"]::-moz-range-track {
+  background: white;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 15px;
+  width: 15px;
+  border: none;
+  background: black;
+  border-radius: 50%;
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 15px;
+  width: 15px;
+  background: black;
+  border-radius: 50%;
+}
+
+@media (max-width: 950px) and (min-width: 601px) {
+  .infoButton-container-message {
+    width: 50vw;
+  }
+
+  .infoButton-btn-text {
+    font-size: 2vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .infoButton-container-message {
+    width: 80vw;
+  }
+  .infoButton-btn-text {
+    font-size: 2vw;
+  }
+}
