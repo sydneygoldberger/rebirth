@@ -11,6 +11,7 @@ var day = 28;
 var output1 = document.getElementById("output1");
 var locationkey = "4079d9f3d06ed67b55f2833282f4efed";
 
+
 function sunTime(){
     fetch('http://api.ipstack.com/70.19.45.226?access_key=' + locationkey)
     .then(function(resp) {
@@ -136,5 +137,8 @@ if(numTimes == null) {
 }
 numTimes++;
 localStorage.setItem("visits-Hlfma", (numTimes).toString(10))
-document.getElementById("visit-times").textContent = numTimes.toString(10);
 console.log(numTimes);
+
+var counterNumber = document.getElementById("counterNumber");
+counterNumber.innerHTML = numTimes;
+

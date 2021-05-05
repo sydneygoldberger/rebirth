@@ -58,10 +58,20 @@ body {
 
 .infoButton-container {
   position: absolute;
-  left: calc(-100% + 100px);
   left: calc(-100% + 30px);
   transform: scale(0);
   transition: transform 0ms linear 200ms;
+}
+
+#counterContainer {
+  position: absolute;
+  font-size: calc(12px + 0.2vw);
+  height: auto;
+  top: 94.5%;
+  left: 1%;
+  color: rgb(150, 150, 150);
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
 }
 
 #rebirth {
